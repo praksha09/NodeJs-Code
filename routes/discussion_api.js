@@ -4,7 +4,7 @@ var app = express();
 var mysql = require('mysql');
 var bodyParser = require('body-parser');
 
-var connection=require('./conn.js'); 
+var connection=require('../controllers/conn.js'); 
 //rest api to get all results
 app.get('/discussion', function (req, res) {
    connection.query('select id,type_id from discussion where dis_id=-1', function (error, results, fields) {

@@ -4,7 +4,7 @@ var app = express();
 var mysql = require('mysql');
 var bodyParser = require('body-parser');
 
-var connection=require('./conn.js'); 
+var connection=require('../controllers/conn.js'); 
 //rest api to get all results
 app.get('/type', function (req, res) {
    connection.query('select * from disc_type', function (error, results, fields) {

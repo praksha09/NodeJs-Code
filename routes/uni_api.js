@@ -5,7 +5,7 @@ var mysql = require('mysql');
 var bodyParser = require('body-parser');
  
 
-var connection=require('./conn.js');
+var connection=require('../controllers/conn.js');
 //rest api to get all results
 app.get('/uni', function (req, res) {
    connection.query('select * from university', function (error, results, fields) {

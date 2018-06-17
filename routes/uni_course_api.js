@@ -5,7 +5,7 @@ var mysql = require('mysql');
 var bodyParser = require('body-parser');
  
 
-var connection=require('./conn.js');
+var connection=require('../controllers/conn.js');
 //rest api to get all results
 app.get('/uni_course', function (req, res) {
    connection.query('select u.u_name,c.c_name,uc.u_id,uc.c_id,uc.id from uni_course uc inner join course c inner join university u on uc.u_id=u.u_id and uc.c_id=c.c_id', function (error, results, fields) {

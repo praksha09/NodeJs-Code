@@ -4,7 +4,7 @@ var app = express();
 var mysql = require('mysql');
 var bodyParser = require('body-parser');
 
-var connection=require('./conn.js'); 
+var connection=require('../controllers/conn.js'); 
 //rest api to get all results
 app.get('/reply', function (req, res) {
    connection.query('select * from reply', function (error, results, fields) {
